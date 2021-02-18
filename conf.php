@@ -1,6 +1,6 @@
 <?php
 //path to the main folder
-define("BASE_DIR", "C:\\xampp\\htdocs\\MAG-engine");
+define("BASE_DIR", ".");
 
 // Mysqli Data Base
 define("DB_HOST", "localhost");

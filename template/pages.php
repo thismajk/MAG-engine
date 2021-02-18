@@ -15,6 +15,9 @@ switch (GET("page")){
     case "adminDashBoard":
         require_once BASE_DIR."/template/adminDashBoard.php";
         break;
+    case "art":
+        require_once BASE_DIR."/template/artPage.php";
+        break;
     default:
         require_once BASE_DIR."/template/main.php";
         break;

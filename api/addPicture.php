@@ -1,12 +1,12 @@
 <?php
 require_once "../conf.php";
 
-$name = $_POST['name'];
-$description = $_POST['description'];
-$author = $_POST['author'];
-$catalogNumber= $_POST['catalogNumber'];
-$status = $_POST['status'];
-$price= $_POST['price'];
+$name = POST('name');
+$description = POST('description');
+$author = POST('author');
+$catalogNumber= POST('catalogNumber');
+$status = POST('status');
+$price= POST('price');
 $addedDate = date("Y-m-d H:i:s");
 $imgName = "img".date("YmdHis")."".rand(000,999).".jpg"; 
 
