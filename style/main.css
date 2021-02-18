@@ -154,7 +154,57 @@
     border: 1px solid #000000;
     border-radius: 3px;
 }
+/*Admin Board*/
+.artItem{
+    padding: 5px;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 5px 0px;
+    border-radius: 4px;
+    font-size: 22px;
+}
+.artItem img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.editButton{
+    display: block;
+    color: #FFFFFF;
+    background-color: #2b76a7;
+    padding: 5px;
+    border-radius: 5px;
+    
 
+}
+.editButton:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.artItem .editButton{
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.deleteButton{
+    display: block;
+    background-color: #C62828;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    color: #FFF;
+    text-decoration: none;
+}
+.deleteButton:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.artItem .deleteButton{
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 /* Forms */
 
 .form{
