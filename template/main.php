@@ -1,17 +1,16 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-5 col-md-12 header">
-            <div class="text-center-vertical-box">
-                <div class="logo-1">Mery Art</div>
-                <div class="logo-2">Gallery</div>
-                <div class="mtd">&#8222;Magia dnia powszedniego&#8221;</div>
-                <button class="button-1">Kontakt</button>
-                <button class="button-2">Galeria Sztuki</button>
+<div class="container-fluid header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 headerTextBox">
+                <div class="headerText">Mery Art<br />  Gallery</div>
+                <p class="mtd">Magia dnia powszedniego</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra augue non dolor vulputate, sed semper massa maximus. Maecenas sagittis dui ac auctor aliquet. In eget hendrerit augue. Nunc lobortis dictum fermentum.</p>
+                <a href="/?page=gallery" class="headerButton">Galeria sztuki</a>
             </div>
-            
+            <div class="col-md-6 col-sm-12 headerImageBox">
+                <img class="headerImg" src="/img/headerImg.jpg">
+               
+            </div>
         </div>
-        <div class="col-lg-7 col-md-12 header image-header" >
-            <img src="<?php BASE_DIR?>/img/back-image.svg">
-        </div>
-    </div>
+    <div>
 </div>
