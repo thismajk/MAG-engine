@@ -2,49 +2,34 @@
     if(Auth::isAdmin($conn) != true){
         header("Location: /");
     }
-    if(isSet(GET("action") && GET("action") == deleteArt && isSetGET("id"))){
+    if(GET("action") == "deleteArt" && GET("id") != null){
+        $artInfo = Gallery::getArtById($conn, GET("id"));
         ?>
-            <div class = "popup"></div>
+        <div class = "popup">
+            <div class="popup-box">
+                <h3>Czy na pewno chcesz usunąć ten przedmiot:?</h3>
+                    <img src="/storage/arts/<?=$artInfo[2]?>">
+                    <h5><?=$artInfo[0]?></h5>
+                    <a href = "?page=adminDashBoard">NIE</a>
+                    <a href = "api/deleteArt.php?id=<?=GET("id")?>">TAK</a>
+            </div>
+        </div>
         <?php
     }
 ?>
 
 <div class="container">
-    <div class="add-form p-3">
-        <form enctype="multipart/form-data" method="post" action="api/addPicture.php">
-            <input type="text" name="name" placeholder="Nazwa" required>
-            <input type="text" name="description" placeholder="Opis" required>
-            <input type="text" name="author" placeholder="Autor" required>
-            <input type="number" name="price" placeholder="cena" required>
-            <input type="number" name="catalogNumber" placeholder="Numer katalogowy" required>
-            <input type="text" name="status" placeholder="status" required>
-            <input type="file" name="img" placeholder="obrazek" required>
-            <input type="submit" value="dodaj">
-
-        </form>
-    </div>  
-    <div class="row p-3">
-        <div class="col-12">
-            <?php
-            $arts = Gallery::getArts($conn);
-            $countArts = count($arts);
-            for($row=0; $row<$countArts; $row++){
-                ?>
-                <div class="artItem">
-                    <img src="/storage/arts/<?=$arts[$row][2]?>">
-                    <span><?=$arts[$row][1]?></span>
-                    
-
-                    <a class="deleteButton" href="?page=adminDashBoard&action=deleteArt&id=<?=$arts[$row][0]?>"><i class="fas fa-trash-alt"></i> usuń</a>
-                    <a class="editButton" href="#"><i class="fas fa-edit"></i> edytuj</a>
-                    
-                    <div style="clear:both"></div>
-                    
-                </div>
-                <?php
-            }
-            
-            ?>
-        </div>
-    </div>  
+    <a href="?page=adminDashBoard&aPage=addArt" class="btn btn-primary m-3">Dodaj Obraz</a>
+    <?php
+    if(GET('aPage') == "addArt"){
+        require_once("template/admin/addArt.php");
+    }
+    else if(GET('aPage') == "editArt"){
+        require_once("template/admin/editArt.php");
+    }
+    else{
+        require_once("template/admin/artList.php");
+    }
+    ?>
+   
 </div>

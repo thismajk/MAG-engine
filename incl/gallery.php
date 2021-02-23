@@ -53,4 +53,19 @@ class Gallery{
         $art = [$name, $price, $imageUrl, $description, $author, $status, $catalogNumber];
         return $art;
     }
+    public static function deleteArt($conn, $id){
+        if(Auth::isAdmin($conn) != true){
+            return false;
+        }
+        mysqli_query($conn, "DELETE FROM gallery WHERE id=$id");
+        return true;
+    }
+    public static function editArt($conn, $name, $description, $author, $catalogNumber, $status, $price, $id){
+        if(Auth::isAdmin($conn) != true){
+            return false;
+        }
+
+        mysqli_query($conn, "UPDATE gallery SET name='$name', description='$description', author='$author', catalogNumber='$catalogNumber', status='$status', price='$price' WHERE id='$id'");
+        return true;
+    }
 }

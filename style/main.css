@@ -1,7 +1,11 @@
+*:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 /*navbar*/
 
 .navbar{
-    background-color: #2b76a7;
+    background-color: #203570;
     color: #FFF;
     padding: 2px 80px;
     box-shadow: 0 0 5px black;
@@ -15,18 +19,25 @@
 .icon{
     width: 53px;
 }
+.navbar-toggler{
+    font-size: 32px;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+}
 
 /*landing page*/
 
 .header{
     overflow: hidden;
-    max-height: calc(100vh - 70px);
+    height: calc(100vh - 70px);
+    z-index: 1;
 }
 .text-center-vertical-box{
     margin-top: calc(50vh - 40px);
     transform: translateY(-50%);
     padding-left: 90px;
-    color: #2b76a7;
+    color: #203570;
         text-shadow: 0 0 5px #afafaf;
 }
 .logo-1{
@@ -47,8 +58,8 @@
     transform: translateY(-110%);
 }
 .button-1{
-    border: 4px solid #2b76a7;
-    color:#2b76a7;
+    border: 4px solid#203570;
+    color:#203570;
     background-color: #FFF;
     box-shadow: 0 0 5px #afafaf;
     text-shadow: 0 0 5px #afafaf;
@@ -57,6 +68,7 @@
     font-size: 28px;
     text-align: center;
     margin-right: 15px;
+    
 }
 .button-2{  
     border: 4px solid #E5564F;
@@ -90,45 +102,20 @@
     padding: 30px 0px;
 }
 .gallery a{
-    color: #000000;
+    color: #444444;
     text-decoration: none;
+    text-align: center;
+}
+.gallery h5{
+    margin-top: 5px;
+    border: 2px solid #444444;
+    padding: 5px 0px;
 }
 .gallery-image{
     width: 100%;
     height: 350px;
     object-fit: cover;
     margin-top: 20px;
-}
-
-@media only screen and (max-width: 1199px){
-    .gallery-image{
-        height: 290px;
-    }
-}
-@media only screen and (max-width: 991px){
-    .gallery-image{
-        height: 330px;
-    }
-}
-@media only screen and (max-width: 991px){
-    .gallery-image{
-        height: 330px;
-    }
-}
-@media only screen and (max-width: 767px){
-    .gallery-image{
-        height: 510px;
-    }
-}
-@media only screen and (max-width: 500px){
-    .gallery-image{
-        height: 480px;
-    }
-}
-@media only screen and (max-width: 400px){
-    .gallery-image{
-        height: 345px;
-    }
 }
 /* Art Page*/
 .artPage{
@@ -143,10 +130,6 @@
 .artPrice{
     font-size: 28px;
     color: rgb(55, 138, 55);
-}
-.artPrice sup{
-    color: gray;
-    font-size: 16px;
 }
 .artDescription{
     padding: 15px;
@@ -213,6 +196,8 @@
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     text-align: center;
     position: relative;
+}
+.form-center{
     top: 50vh;
     transform: translateY(-75%);
 }
@@ -249,4 +234,117 @@
     border: 0px;
     background-color: #6b107d;
     color: #FFF;
+}
+textarea{
+        width: 100%;
+        height: 300px;
+        border: 0px;
+        background-color: #FFF;
+        border-radius: 0px;
+        border-bottom: 3px solid #6b107d;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 20px;
+        outline: none;
+}
+select{
+    width: 100%;
+    border: 0px;
+    background-color: #FFF;
+    border-radius: 0px;
+    border-bottom: 3px solid #6b107d;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    outline: none;
+}
+/*Pop up*/
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.popup-box{
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    
+}
+.popup-box img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1199px){
+    .gallery-image{
+        height: 290px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .gallery-image{
+        height: 330px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .gallery-image{
+        height: 330px;
+    }
+    .navbar{
+        padding: 2px 10px;
+    }
+    .image-header{
+        margin-top: calc(-100vh + 70px);
+        z-index: 0;
+    }
+    .header img{
+        margin-top: 120vh;
+    }
+    .text-center-vertical-box{
+        padding: 0px;
+        text-align: center;
+       
+    }
+    .nav-link{
+        text-align: center;
+    }
+    .button-1, .button-2{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .gallery-image{
+        height: 510px;
+    }
+    .button-1, .button-2{
+        width: 250px;
+    }
+    
+}
+@media only screen and (max-width: 549px){
+    .button-1, .button-2{
+        margin: 10px;
+    }
+    
+}
+@media only screen and (max-width: 500px){
+    .gallery-image{
+        height: 480px;
+    }
+    
+}
+@media only screen and (max-width: 400px){
+    
+    .gallery-image{
+        height: 345px;
+    }
+    
 }

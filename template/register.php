@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6 m-auto">
-            <div class="form">
+            <div class="form form-center">
                 <h1>rejestracja</h1>
                 <form method="post" action="/api/register.php">
                     <input id="username" class="form-control" type="text" maxlength="<?=USER_USERNAME_MAX_LEN?>" name="username" placeholder="login" required>
