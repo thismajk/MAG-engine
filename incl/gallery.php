@@ -4,17 +4,34 @@ class Gallery{
         $query = mysqli_query($conn, "SELECT id, name, imageUrl FROM gallery ORDER BY id DESC");
         while($row = mysqli_fetch_array($query)) {
             ?>  
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href = "/?page=art&id=<?=$row['id']?>">
-                        <img src="/storage/arts/<?=$row['imageUrl']?>" class="gallery-image">
-                        <h5><?=$row['name']?></h5>
-                    </a>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <div class="galleryItemBox">
+                        <a href = "/?page=art&id=<?=$row['id']?>">
+                            <img src="/storage/arts/<?=$row['imageUrl']?>" class="gallery-image">
+                            <h5><?=$row['name']?></h5>
+                        </a>
+                    </div>
                 </div>
             <?php
         }
     }
     public static function getArts($conn){
         $query = mysqli_query($conn, "SELECT id, name, imageUrl FROM gallery ORDER BY id DESC");
+        $i = 0;
+        $arts = [];
+        while($row = mysqli_fetch_array($query)) {
+           $name = $row['name'];
+           $id = $row['id'];
+           $imageUrl = $row['imageUrl'];
+           $art = [$id, $name, $imageUrl];
+           $arts[$i++] = $art;
+        }
+        
+        return $arts;
+    }
+
+    public static function getArts2($conn, $quantity){
+        $query = mysqli_query($conn, "SELECT id, name, imageUrl FROM gallery ORDER BY id DESC LIMIT $quantity");
         $i = 0;
         $arts = [];
         while($row = mysqli_fetch_array($query)) {

@@ -8,9 +8,30 @@
                 <a href="/?page=gallery" class="headerButton">Galeria sztuki</a>
             </div>
             <div class="col-md-6 col-sm-12 headerImageBox">
-                <img class="headerImg" src="/img/headerImg.jpg">
-               
+                <img class="headerImg" src="/img/headerImg.jpg"> 
             </div>
         </div>
-    <div>
+    </div>
+</div>
+<div class="container mainBody">
+    <h1>Nowe obrazy</h1>
+    <hr />
+    <div class="row">
+    <?php
+        $arts = Gallery::getArts2($conn, "3");
+        $countArts = count($arts);
+        for($row=0; $row<$countArts; $row++){
+            ?>
+            <div class="col-lg-4 col-md-12 p-2">
+                    <div class="galleryItemBox">
+                        <a href = "/?page=art&id=<?=$row['id']?>">
+                            <img src="/storage/arts/<?=$arts[$row][2]?>" class="gallery-image">
+                            <h5><?=$arts[$row][1]?></h5>
+                        </a>
+                    </div>
+                </div>
+            <?php
+        }
+        ?>   
+    </div>
 </div>
