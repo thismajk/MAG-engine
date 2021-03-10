@@ -98,12 +98,7 @@
 .gallery{
     padding: 30px 0px;
 }
-.gallery .row a{
-    color: #444444;
-    text-decoration: none;
-    text-align: center;
-}
-.gallery h5{
+.galleryItemBox h5{
     margin-top: 10px;
     margin-bottom: 0px;
     border: 2px solid #444444;
@@ -116,19 +111,62 @@
     
 }
 .galleryItemBox{
-    background-color: #F8F9FA;
     padding: 10px;
-    box-shadow: 0 0 3px #d6d6d6;
+    border: 3px solid #E5E5E5;
+}
+.galleryItemBox a{
+    text-align: center;
+    color: #444444
 }
 /* Art Page*/
 .artPage{
     padding: 30px 0;
 }
+.imageContainer{
+    position: relative;
+    width: 100%;
+    border: 4px solid #F8F9FA;
+    
+}
+.imageContainer:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    
+  }
 .paddingBox{
     padding: 20px 10px;
 }
 .artImage{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    padding: 5px;
+}
+.contactButton{
+    text-decoration: none;
+    
+    background-color: #444444;
+    width: 80%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #FFF !important;
+}
+.contactButton:hover{
+    cursor: pointer;
+}
+.contact{
+    width: 80%;
+    text-align: center;
+    line-height: 2em;
+    margin-top: 10px;
 }
 .artPrice{
     font-size: 28px;
@@ -203,7 +241,7 @@
     border: 0px;
     background-color: #FFF;
     border-radius: 0px;
-    border-bottom: 3px solid #6b107d;
+    border: 3px solid #444444;
     padding: 5px;
     font-size: 20px;
     margin-top: 20px;
@@ -212,7 +250,7 @@
 
 .form input[type=submit]{
     border: 0px;
-    background-color: #6b107d;
+    background-color: #444444;
     color: #FFF;
 }
 .form2 input{
@@ -220,7 +258,7 @@
     border: 0px;
     background-color: #FFF;
     border-radius: 0px;
-    border-bottom: 3px solid #6b107d;
+    border: 3px solid #444444;
     padding: 5px;
     font-size: 20px;
     margin-top: 20px;
@@ -229,7 +267,7 @@
 
 .form2 input[type=submit]{
     border: 0px;
-    background-color: #6b107d;
+    background-color: #444444;
     color: #FFF;
 }
 textarea{
@@ -238,7 +276,7 @@ textarea{
         border: 0px;
         background-color: #FFF;
         border-radius: 0px;
-        border-bottom: 3px solid #6b107d;
+        border: 3px solid #444444;
         padding: 5px;
         font-size: 20px;
         margin-top: 20px;
@@ -249,7 +287,7 @@ select{
     border: 0px;
     background-color: #FFF;
     border-radius: 0px;
-    border-bottom: 3px solid #6b107d;
+    border: 3px solid #444444;
     padding: 5px;
     font-size: 20px;
     margin-top: 20px;
@@ -353,7 +391,3 @@ select{
     }
 }
 /*other*/
-.box{
-    background-color: #F8F9FA;
-    padding: 20px;
-}

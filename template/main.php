@@ -1,8 +1,8 @@
-<div class="container-fluid header">
+<header class="container-fluid header">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 headerTextBox">
-                <div class="headerText">Mery Art<br />  Gallery</div>
+                <h1 class="headerText">Mery Art<br />  Gallery</h1>
                 <p class="mtd">Magia dnia powszedniego</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra augue non dolor vulputate, sed semper massa maximus. Maecenas sagittis dui ac auctor aliquet. In eget hendrerit augue. Nunc lobortis dictum fermentum.</p>
                 <a href="/?page=gallery" class="headerButton">Galeria sztuki</a>
@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 <div class="container mainBody">
     <h1>Nowe obrazy</h1>
     <hr />
@@ -24,7 +24,7 @@
             ?>
             <div class="col-lg-4 col-md-12 p-2">
                     <div class="galleryItemBox">
-                        <a href = "/?page=art&id=<?=$row['id']?>">
+                        <a href = "/?page=art&id=<?=$arts[$row][0]?>">
                             <img src="/storage/arts/<?=$arts[$row][2]?>" class="gallery-image">
                             <h5><?=$arts[$row][1]?></h5>
                         </a>
