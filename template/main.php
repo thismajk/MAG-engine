@@ -4,7 +4,7 @@
             <div class="col-md-6 col-sm-12 headerTextBox">
                 <h1 class="headerText">Mery Art<br />  Gallery</h1>
                 <p class="mtd">Magia dnia powszedniego</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra augue non dolor vulputate, sed semper massa maximus. Maecenas sagittis dui ac auctor aliquet. In eget hendrerit augue. Nunc lobortis dictum fermentum.</p>
+                <p>Marzena Okuszko jest wrocławską artystką, członkinią Dolnośląskiego Stowarzyszenia Artystów Plastyków we Wrocławiu. Maluje głównie w technice akrylowej. Prace zawierają odwołania do folkloru słowiańskiego, jak i tradycji innych stron świata.</p>
                 <a href="/?page=gallery" class="headerButton">Galeria sztuki</a>
             </div>
             <div class="col-md-6 col-sm-12 headerImageBox">

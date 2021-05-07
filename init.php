@@ -4,6 +4,7 @@ $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 require_once BASE_DIR."/incl/auth.php";
 require_once BASE_DIR."/incl/gallery.php";
+require_once BASE_DIR."/incl/library.php";
 
 function GET(string $key, bool $required = false, bool $secure = true) {
     if(!isset($_GET[$key])) {
