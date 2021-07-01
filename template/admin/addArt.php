@@ -16,8 +16,8 @@
         for($row=0; $row<$countArts; $row++){
             ?>
                 <label>
-                    <input type="radio" value="<?=$arts[$row][0]?>" name="imgId">
-                    <img src="/storage/arts/<?=$arts[$row][1].".".$arts[$row][2]?>" width="200px" height="200px;">
+                    <input type="radio" value="<?=$arts[$row][0]?>" name="imgId" class="checkBoxHidden">
+                    <img src="/storage/arts/<?=$arts[$row][1].".".$arts[$row][2]?>" width="200px" height="200px;" class="imageBackLight">
                 </label> 
             <?php
         }

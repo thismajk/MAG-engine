@@ -1,37 +1,73 @@
 <header class="container-fluid header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 headerTextBox">
-                <h1 class="headerText">Mery Art<br />  Gallery</h1>
-                <p class="mtd">Magia dnia powszedniego</p>
-                <p>Marzena Okuszko jest wrocławską artystką, członkinią Dolnośląskiego Stowarzyszenia Artystów Plastyków we Wrocławiu. Maluje głównie w technice akrylowej. Prace zawierają odwołania do folkloru słowiańskiego, jak i tradycji innych stron świata.</p>
-                <a href="/?page=gallery" class="headerButton">Galeria sztuki</a>
+    <div class="container header-inside">
+        <h1>Mery Art Gallery</h1>
+        <h2>Magia dnia powszedniego</h2>
+    </div>
+</header>
+<section class="container main-cards">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-one">
+                <div class="card-header">GALERIA</div>
+                <div class="card-body">
+                    <img src="img/image-Gallery.png">
+                </div>
             </div>
-            <div class="col-md-6 col-sm-12 headerImageBox">
-                <img class="headerImg" src="/img/headerImg.jpg"> 
+        </div>
+        <div class="col-md-4">
+            <div class="card card-two">
+                <div class="card-header">BLOG</div>
+                <div class="card-body">
+                    <img src="img/image-Blog.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-three">
+                <div class="card-header">O MNIE</div>
+                <div class="card-body">
+                    <img src="img/image-About.png">
+                </div>
             </div>
         </div>
     </div>
-</header>
-<div class="container mainBody">
-    <h1>Nowe obrazy</h1>
-    <hr />
-    <div class="row">
-    <?php
-        $arts = Gallery::getArts2($conn, "3");
-        $countArts = count($arts);
-        for($row=0; $row<$countArts; $row++){
-            ?>
-            <div class="col-lg-4 col-md-12 p-2">
-                    <div class="galleryItemBox">
-                        <a href = "/?page=art&id=<?=$arts[$row][0]?>">
-                            <img src="/storage/arts/<?=$arts[$row][2]?>" class="gallery-image">
-                            <h5><?=$arts[$row][1]?></h5>
-                        </a>
+</section>
+<section class="new-images">
+    <div class="container">
+        <h2>NOWE OBRAZY</h2>
+        <hr />
+        <div class="row">
+        <?php
+            $arts = Gallery::getArts2($conn, "3");
+            $countArts = count($arts);
+            for($row=0; $row<$countArts; $row++){
+                ?>
+                <div class="col-lg-4 col-md-12 p-2">
+                        <div class="card">
+                            <a href = "/?page=art&id=<?=$arts[$row][0]?>">
+                                <div class="image">
+                                    <img src="/storage/arts/<?=$arts[$row][2]?>">
+                                </div>
+                                <h4><?=$arts[$row][1]?></h4>
+                                <p><?php
+                                    $description = $arts[$row][3];
+                                    if(strlen($description) > 75){
+                                        echo substr($description, 0, 75)."...";
+                                    }
+                                    else{
+                                        echo $description;
+                                    }
+                                ?></p>
+                                <hr/>
+                                <h5><?=$arts[$row][4]?>zł</h5>
+
+                            </a>
+                        </div>
                     </div>
-                </div>
-            <?php
-        }
-        ?>   
+                <?php
+            }
+            ?>   
+        </div>
     </div>
-</div>
+</section>
+

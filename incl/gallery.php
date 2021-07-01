@@ -21,14 +21,20 @@ class Gallery{
     }
 
     public static function getArts2($conn, $quantity){
-        $query = mysqli_query($conn, "SELECT id, name, imageUrl FROM gallery ORDER BY id DESC LIMIT $quantity");
-        $i = 0;
+        $query = mysqli_query($conn, "SELECT * FROM gallery ORDER BY id DESC LIMIT $quantity");
         $arts = [];
+        $i = 0;
         while($row = mysqli_fetch_array($query)) {
+            $imgId = $row['imgId'];
+            $query2 = mysqli_query($conn, "SELECT name, extension FROM library Where id = $imgId");
+            while($row2 = mysqli_fetch_array($query2)) {
+                $imageUrl = $row2['name'].".".$row2['extension'];
+            }
            $name = $row['name'];
            $id = $row['id'];
-           $imageUrl = $row['imageUrl'];
-           $art = [$id, $name, $imageUrl];
+           $description = $row['description'];
+           $price = $row['price'];
+           $art = [$id, $name, $imageUrl, $description, $price];
            $arts[$i++] = $art;
         }
         

@@ -12,7 +12,6 @@ $price= POST('price');
 if(!Gallery::editArt($conn, $name, $description, $author, $catalogNumber, $status, $price, $id)){
     exit("error: edycja");
 }
-
-
-
-header("Location: ../?page=art&id=".$id);
+else{
+    header("Location: ../?page=art&id=".$id);
+}
