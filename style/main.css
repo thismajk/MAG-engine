@@ -257,11 +257,17 @@
 }
 
 @media only screen and (max-width: 991px){
+    .main-cards {
+        margin-top: 8vh;
+    }
     .main-cards .card{
         margin-top: 15px;
     }
     .main-cards .card-body{
         display: none;
+    }
+    .new-images{
+        margin-top: 10vh
     }
 }
 
