@@ -1,0 +1,1 @@
+<img src="img/inProgress.jpg" class="in-progress">

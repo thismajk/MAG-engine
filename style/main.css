@@ -76,6 +76,10 @@
     margin-top: -15vh;
     font-size: 20px;
 }
+.main-cards a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 .main-cards .card{
     border-radius: 0px;
     border: 0px;
@@ -256,20 +260,7 @@
     font-size: 28px;
 }
 
-@media only screen and (max-width: 991px){
-    .main-cards {
-        margin-top: 8vh;
-    }
-    .main-cards .card{
-        margin-top: 15px;
-    }
-    .main-cards .card-body{
-        display: none;
-    }
-    .new-images{
-        margin-top: 10vh
-    }
-}
+
 
 /*Admin Board*/
 .artItem{
@@ -587,6 +578,25 @@ select{
     object-fit: cover;
 }
 
+
+@media only screen and (max-width: 991px){
+    .main-cards {
+        margin-top: 8vh;
+    }
+    .main-cards .card{
+        margin-top: 15px;
+    }
+    .main-cards .card-body{
+        display: none;
+    }
+    .new-images{
+        margin-top: 10vh
+    }
+    .footer .middle .wrapper{
+        padding: 20px;
+    }
+}
+
 @media only screen and (max-width: 1199px){
     .gallery-image{
         height: 290px;
@@ -609,25 +619,7 @@ select{
     
     
 }
-@media only screen and (max-width: 767px){
-    .gallery-image{
-        height: 510px;
-    }
-    .headerImageBox{
-       display: none;
-    }
-    .headerTextBox{
-        text-align: center;
-    }
-    .headerText{
-        margin-top: 15px;
-    }
-    .headerButton{
-        margin: auto;
-    }
-    .header{
-        min-height: 450px;
-    }
+
     
 }
 @media only screen and (max-width: 500px){
@@ -657,3 +649,34 @@ select{
     padding-right:0;
     padding-left:0;
 }
+.in-progress{
+    width: 50%;
+    display: block;
+    margin: 10vh auto;
+    padding: 15px;
+    border: 3px dashed #25BDA7;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 767px){
+    .gallery-image{
+        height: 510px;
+    }
+    .headerImageBox{
+       display: none;
+    }
+    .headerTextBox{
+        text-align: center;
+    }
+    .headerText{
+        margin-top: 15px;
+    }
+    .headerButton{
+        margin: auto;
+    }
+    .header{
+        min-height: 450px;
+    }
+    .in-progress{
+        width: 75%;
+    }

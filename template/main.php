@@ -7,28 +7,28 @@
 <section class="container main-cards">
     <div class="row">
         <div class="col-md-4">
-            <div class="card card-one">
+            <a href="/?page=gallery" class="card card-one">
                 <div class="card-header">GALERIA</div>
                 <div class="card-body">
                     <img src="img/image-Gallery.png">
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-4">
-            <div class="card card-two">
+            <a  href="/?page=blog" class="card card-two">
                 <div class="card-header">BLOG</div>
                 <div class="card-body">
                     <img src="img/image-Blog.png">
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-4">
-            <div class="card card-three">
+            <a href="/?page=about" class="card card-three">
                 <div class="card-header">O MNIE</div>
                 <div class="card-body">
                     <img src="img/image-About.png">
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>

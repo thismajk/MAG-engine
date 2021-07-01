@@ -18,6 +18,12 @@ switch (GET("page")){
     case "art":
         require_once BASE_DIR."/template/artPage.php";
         break;
+    case "blog":
+        require_once BASE_DIR."/template/inProgress.php";
+        break;
+    case "about":
+        require_once BASE_DIR."/template/inProgress.php";
+        break;
     default:
         require_once BASE_DIR."/template/main.php";
         break;
