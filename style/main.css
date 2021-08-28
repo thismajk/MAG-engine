@@ -39,6 +39,13 @@
     color: #203570;
 }
 
+.navIcon{
+    font-size: 22px;
+    margin-right: 5px;
+    margin-left: 10px;
+    transform: translateY(2px);
+}
+
 /*landing page*/
 .header{
     width: 100%;
@@ -186,25 +193,49 @@
 .gallery{
     padding: 30px 0px;
 }
-.galleryItemBox h5{
-    margin-top: 10px;
-    margin-bottom: 0px;
-    border: 2px solid #444444;
-    padding: 10px 0px;
+
+.gallery h2{
+    color: #282828;
+    font-weight: 400;
 }
-.gallery-image{
+.gallery a h4{
+    color: #282828;
+    padding: 15px 0 0 0;
+    font-size: 24px;
+}
+.gallery a{
+    color: #7A7A7A;
+    text-decoration: none;
+}
+.gallery hr{
+    border-top: 2px solid #25BDA7;
+}
+.gallery .card{
+    border: 0px;
+    border-radius: 0px;
+    padding: 36px 36px 10px 36px;
+    background-color: #f8f8f8;
+}
+.gallery .image{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+.gallery .image img{
+    position: absolute;
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
-    
 }
-.galleryItemBox{
-    padding: 10px;
-    border: 3px solid #E5E5E5;
+.gallery .card p{
+    min-height: 48px;
 }
-.galleryItemBox a{
-    text-align: center;
-    color: #444444
+.gallery .card hr{
+    border-top: 1px solid #7A7A7A;
+}
+.gallery .card h5{
+    color: #25BDA7;
+    font-size: 24px;
 }
 /* Art Page*/
 .artPage{
@@ -622,20 +653,14 @@ select{
 }
 
 @media only screen and (max-width: 1199px){
-    .gallery-image{
-        height: 290px;
-    }
+
 }
 @media only screen and (max-width: 991px){
-    .gallery-image{
-        height: 330px;
-    }
+
     
 }
 @media only screen and (max-width: 991px){
-    .gallery-image{
-        height: 330px;
-    }
+
     .navbar{
         padding: 2px 10px;
     }
@@ -644,9 +669,7 @@ select{
     
 }
 @media only screen and (max-width: 500px){
-    .gallery-image{
-        height: 480px;
-    }
+    
     
 }
 @media only screen and (max-width: 400px){
@@ -680,9 +703,6 @@ select{
 }
 
 @media only screen and (max-width: 767px){
-    .gallery-image{
-        height: 510px;
-    }
     .headerImageBox{
        display: none;
     }
@@ -706,3 +726,20 @@ select{
 .vh-80{
     height: 80vh;
 }
+
+.about{
+    text-align: center;
+    margin-bottom: 20vh;
+    margin-top: -20vh
+}
+.about img{
+    width: 50%;
+    border-radius: 50%;
+    border: 2px dashed #198070;
+    padding: 4px;
+}
+.about h2{
+    color: #198070;
+    margin-top: 40px;
+}
+

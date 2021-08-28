@@ -10,13 +10,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Strona główna</a>
+            <a class="nav-link" href="/"><i class="fas fa-home navIcon"></i> Strona Główna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/?page=gallery">Galeria</a>
+            <a class="nav-link" href="/?page=gallery"><i class="fas fa-image navIcon"></i> Galeria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">O Mnie</a>
+            <a class="nav-link" href="/?page=about"><i class="fas fa-id-card navIcon"></i> O Mnie</a>
           </li>
         </ul>
       </div>

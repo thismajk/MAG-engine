@@ -7,14 +7,29 @@
         for($row=0; $row<$countArts; $row++){
             ?>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                <div class="galleryItemBox">
-                    <a href = "/?page=art&id=<?=$arts[$row][0]?>">
-                        <img src="/storage/arts/<?=$arts[$row][2]?>" class="gallery-image">
-                        <h5><?=$arts[$row][1]?></h5>
-                    </a>
+            <div class="col-lg-4 col-md-6 col-ms-12 p-2">
+                    <div class="card">
+                        <a href = "/?page=art&id=<?=$arts[$row][0]?>">
+                            <div class="image">
+                                <img src="/storage/arts/<?=$arts[$row][2]?>">
+                            </div>
+                            <h4><?=$arts[$row][1]?></h4>
+                            <p><?php
+                                $description = $arts[$row][3];
+                                if(strlen($description) > 75){
+                                    echo substr($description, 0, 75)."...";
+                                }
+                                else{
+                                    echo $description;
+                                }
+                            ?></p>
+                            <hr/>
+                            <h5><?=$arts[$row][4]?>zł</h5>
+
+                        </a>
+                    </div>
                 </div>
-            </div> 
+
 
             <?php
         }

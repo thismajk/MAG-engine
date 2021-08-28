@@ -2,7 +2,7 @@
 class Gallery{
 
     public static function getArts($conn){
-        $query = mysqli_query($conn, "SELECT id, name, imgId FROM gallery ORDER BY id DESC");
+        $query = mysqli_query($conn, "SELECT * FROM gallery ORDER BY id DESC");
         $arts = [];
         $i = 0;
         while($row = mysqli_fetch_array($query)) {
@@ -11,9 +11,11 @@ class Gallery{
             while($row2 = mysqli_fetch_array($query2)) {
                 $imageUrl = $row2['name'].".".$row2['extension'];
             }
-           $name = $row['name'];
-           $id = $row['id'];
-           $art = [$id, $name, $imageUrl];
+            $name = $row['name'];
+            $id = $row['id'];
+            $description = $row['description'];
+            $price = $row['price'];
+            $art = [$id, $name, $imageUrl, $description, $price];
            $arts[$i++] = $art;
         }
         

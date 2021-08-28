@@ -22,7 +22,7 @@ switch (GET("page")){
         require_once BASE_DIR."/template/inProgress.php";
         break;
     case "about":
-        require_once BASE_DIR."/template/inProgress.php";
+        require_once BASE_DIR."/template/about.php";
         break;
     default:
         require_once BASE_DIR."/template/main.php";

@@ -14,7 +14,7 @@
                     <p ><b>Autor: </b><?=$artInfo[4]?><br/><b>Nr. katalogowy: </b><?=$artInfo[6]?><b><br/>Status: </b><?=$artInfo[5]?></p>
                     <div><b>Opis:</b><br/><pre><?=$artInfo[3]?></pre></div> 
                     <a class="contactButton">Zapytaj</a>
-                    <div class="contact">lub <br />Zadzwoń: +48 000000000</div>
+                    <div class="contact">lub <br />Zadzwoń: +48 607 860 002</div>
 
                     <hr />
                     <p class="p-md-2">Jeśli spodobał ci się ten obraz i chcesz go kupić skontaktuj się z nami!</p>
