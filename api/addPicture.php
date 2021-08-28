@@ -14,4 +14,4 @@ if(!Gallery::addPicture($conn, $name, $description, $author, $catalogNumber, $st
     exit("error: dodawnie nie powiodło się");
 }
 
-header("Location: ../?page=adminDashBoard");
+header("Location: ../?page=adminDashBoard&aPage=artList");

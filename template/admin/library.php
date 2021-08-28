@@ -22,9 +22,11 @@
         for($row=0; $row<$countArts; $row++){
             ?>
             <div class="col-2 mt-3">
+            <a href="?page=adminDashBoard&aPage=library&imageId=<?=$arts[$row][0]?>">
                 <div class="libItemBox">
                     <img src="/storage/arts/<?=$arts[$row][1].".".$arts[$row][2]?>">
                 </div>
+            </a>
             </div>
             <?php
         }
@@ -32,6 +34,11 @@
     </div>
 </div>
 </div>
+<?php
+    if(GET("imageId") !== null){
+        require_once("imageOptions.php");
+    }
+?>
 <script>
     var pullfiles=function(){
     var fileInput = document.querySelector("#upload");

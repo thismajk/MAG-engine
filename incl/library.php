@@ -12,7 +12,7 @@ class Library{
         $location = "../storage/arts/".$filename.".".$ext;
        // move_uploaded_file($fileTmp,$location);
 
-        Library::compressImage($fileTmp,$location,60);
+        Library::compressImage($fileTmp,$location,80);
 
         mysqli_query($conn, "INSERT INTO library VALUES (NULL, '$filename', '$ext', '$addedDate', '$userID')");
     }
@@ -50,5 +50,27 @@ class Library{
         }
         
         return $arts;
+    }
+
+    public static function getArt($conn, $id){
+        $query = mysqli_query($conn, "SELECT * FROM library WHERE id = $id");
+        while($row = mysqli_fetch_array($query)) {
+            $name = $row['name'];
+            $id = $row['id'];
+            $extension = $row['extension'];  
+         }
+         $art = [$id, $name, $extension];
+         return $art;
+    }
+
+    public static function deleteArt($conn, $id){
+        $art = Library::getArt($conn, $id);
+
+        if(Auth::isAdmin($conn) != true){
+            return false;
+        }
+        mysqli_query($conn, "DELETE FROM library WHERE id=$id");
+        unlink("../storage/arts/".$art[1].".".$art[2]);
+        return true;
     }
 }

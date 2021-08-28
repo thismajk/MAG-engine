@@ -84,6 +84,9 @@
                 else if(GET('aPage') == "library"){
                     require_once("template/admin/library.php");
                 }
+                else{
+                    require_once("template/admin/gallery.php");
+                }
                 ?>
             </div>
         </div>
