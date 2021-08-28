@@ -28,6 +28,7 @@
                         <li>Kontakt</li>
                         <li>Galeria</li>
                         <li>O Mnie</li>
+                        <li><a href="?page=login" style="text-decoration: none;color: #FFF;">Logowanie</a></li>
                     </ol>
                 </div>
                 <div class="wrapper col-sm-12 col-lg-6 col-xl-3">
