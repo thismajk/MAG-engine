@@ -1,4 +1,28 @@
 <!--Optional JavaScript-->
+<script>
+
+    if(showCookie("cookiesPrivacy") == "true"){
+        document.getElementById("cookies").style.display = "none";
+    }
+
+    function showCookie(name) {
+        if (document.cookie !== "") {
+            const cookies = document.cookie.split(/; */);
+
+            for (let cookie of cookies) {
+                const [ cookieName, cookieVal ] = cookie.split("=");
+                if (cookieName === decodeURIComponent(name)) {
+                    return decodeURIComponent(cookieVal);
+                }
+            }
+        }
+        return false;
+    }
+    function acceptCookiesPrivacy(){
+        document.cookie = "cookiesPrivacy=true"
+        document.getElementById("cookies").style.display = "none";
+    }
+</script>
 <!--jQuery first, then Popper . js, then Bootstrap JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <div class="footer">
