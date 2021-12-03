@@ -30,7 +30,7 @@ class Library{
             $image = imagecreatefrompng($source);
         }
 
-        $scale = min(400/$info[0], 400/$info[1]);
+        $scale = min(800/$info[0], 800/$info[1]);
         $newWidth = ceil($scale*$info[0]);
         $newHeight = ceil($scale*$info[1]);
         $image =  imagescale($image, $newWidth, $newHeight);
