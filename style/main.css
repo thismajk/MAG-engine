@@ -3,6 +3,10 @@
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.row{
+    max-width: 100vw;
+}
+
 /*navbar*/
 body{
     background-color: #1C2431;
@@ -11,23 +15,32 @@ body{
     background-color: #151B29;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    padding: 2px 120px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+    padding: 30px 80px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 35px;
 }
 .navbar a{
     color: #FBFBFB;
+    margin-right: 20px;
 }
 .navbar-nav{
     margin-left: auto;
+   
+
 }
 .icon{
-    width: 53px;
+    width: 150px;
+    position: absolute;
+    margin-top: -45px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    background-color: #151B29;
+    z-index: 999;
 }
 .navbar-toggler{
     font-size: 32px;
-    color: #181818;
-    margin: 0px;
-    padding: 0px;
+    color: #FBFBFB;
+    padding: 30px 20px;
 }
 
 .path{
@@ -48,6 +61,28 @@ body{
     transform: translateY(2px);
 }
 
+
+@media only screen and (max-width: 991px){
+    .navbar{
+        margin-bottom: 40px;
+    }
+    .navbar-nav{
+        padding-top: 75px;
+        text-align: center;
+    }
+    .nav-item{
+        background-color: #1C2431;
+        margin-bottom: 5px;
+    }
+    .icon{
+        margin-left: 20px;
+    }
+    .card{
+        max-width: 100%;
+    }
+    
+}
+
 /*landing page*/
 .header{
     width: 100%;
@@ -56,6 +91,7 @@ body{
     background-position: center;
     background-size: cover;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-top: -35px;
 }
 .header .container{
     position: relative;
@@ -136,7 +172,7 @@ body{
     text-decoration: none;
 }
 .new-images hr{
-    border-top: 2px solid #25BDA7;
+    border-top: 2px solid #0B59FC;
 }
 .new-images .card{
     border: 0px;
@@ -159,10 +195,10 @@ body{
     min-height: 48px;
 }
 .new-images .card hr{
-    border-top: 1px solid #25BDA7;
+    border-top: 1px solid #0B59FC;
 }
 .new-images .card h5{
-    color: #25BDA7;
+    color: #0B59FC;
     font-size: 24px;
 }
 
@@ -211,7 +247,7 @@ body{
     text-decoration: none;
 }
 .gallery hr{
-    border-top: 2px solid #25BDA7;
+    border-top: 2px solid #0B59FC;
 }
 .gallery .card{
     border: 0px;
@@ -234,11 +270,24 @@ body{
     min-height: 48px;
 }
 .gallery .card hr{
-    border-top: 1px solid #198070;
+    border-top: 1px solid #0B59FC;
 }
 .gallery .card h5{
-    color: #25BDA7;
+    color: #0B59FC;
     font-size: 24px;
+}
+@media only screen and (max-width: 576px){
+    .card{
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .gallery{
+        padding: 30px 20px;
+    }
+
+    
 }
 /* Art Page*/
 .artPage{
@@ -246,7 +295,7 @@ body{
     color: #FBFBFB;
 }
 .artPage hr{
-    border-top: 1px solid #198070;
+    border-top: 1px solid #0B59FC;
 }
 .imageContainer{
     position: relative;
@@ -276,8 +325,7 @@ body{
 }
 .contactButton{
     text-decoration: none;
-    
-    background-color: #444444;
+    background-color: #0B59FC;
     width: 80%;
     display: block;
     padding: 10px;
@@ -287,6 +335,7 @@ body{
 }
 .contactButton:hover{
     cursor: pointer;
+    background-color: #444444;
 }
 .contact{
     width: 80%;
@@ -296,6 +345,11 @@ body{
 }
 .artPrice{
     font-size: 28px;
+}
+@media only screen and (max-width: 576px){
+    .artPage{
+        padding: 30px 20px;
+    }
 }
 
 
@@ -556,7 +610,7 @@ select{
 .footer .socialmedia{
     width: 100%;
     padding: 0px 25px;
-    background-color: #25BDA7;
+    background-color: #0B59FC;
     color: #FFF;
     font-size: 20px;
 }
@@ -583,7 +637,7 @@ select{
 
 }
 .footer .socialmedia .wrapper:hover{
-    background-color: #198070;
+    background-color: #10332A;
 }
 .footer .middle{
     background-color: #1C2431;
@@ -601,7 +655,7 @@ select{
     display: block;
     width: 30%;
     height: 2px;
-    background-color: #25BDA7;
+    background-color: #0B59FC;
     margin-bottom: 20px;
 }
 .footer .middle .wrapper span{
@@ -728,6 +782,17 @@ select{
     .in-progress{
         width: 75%;
     }
+
+    .artPage h1{
+        padding: 10px 0px;
+
+    }
+    .artPage .contactButton{
+        margin: auto;
+    }
+    .artPage .contact{
+        margin: auto;
+    }
 }
 
 .vh-80{
@@ -746,7 +811,7 @@ select{
     padding: 4px;
 }
 .about h2{
-    color: #198070;
+    color: #0B59FC;
     margin-top: 40px;
 }
 
@@ -784,3 +849,17 @@ select{
 .about p{
     color: #FBFBFB;
 }
+pre{
+    overflow-x:auto;
+    color: #FBFBFB;
+    font-family: ar;
+}
+@media only screen and (max-width: 991px){
+
+    .about{
+        margin-top: 20px;
+    }
+    }
+
+    
+  

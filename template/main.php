@@ -42,7 +42,7 @@
             $countArts = count($arts);
             for($row=0; $row<$countArts; $row++){
                 ?>
-                <div class="col-lg-4 col-md-12 p-2">
+                <div class="col-lg-4 col-md-12">
                     <div class="card">
                         <a href = "/?page=art&id=<?=$arts[$row][0]?>">
                             <div class="image">

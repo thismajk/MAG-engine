@@ -7,7 +7,7 @@
         for($row=0; $row<$countArts; $row++){
             ?>
 
-            <div class="col-lg-4 col-md-6 col-ms-12 p-2">
+            <div class="col-lg-4 col-md-6 col-ms-12">
                     <div class="card">
                         <a href = "/?page=art&id=<?=$arts[$row][0]?>">
                             <div class="image">
@@ -28,7 +28,7 @@
 
                         </a>
                     </div>
-                </div>
+            </div>
 
 
             <?php
