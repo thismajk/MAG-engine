@@ -76,3 +76,7 @@
             Created by Michał Gombos | Mery Art Gallery | All rights reserved | 2021.
         </div>
 </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVSWS4N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
