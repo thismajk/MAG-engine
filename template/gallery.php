@@ -13,7 +13,15 @@
                             <div class="image">
                                 <img src="/storage/arts/<?=$arts[$row][2]?>">
                             </div>
-                            <h4><?=$arts[$row][1]?></h4>
+                            <h4><?php 
+                                $title = $arts[$row][1];
+                                if(strlen($title) > 20){
+                                    echo substr($title, 0, 18)."...";
+                                }
+                                else{
+                                    echo $title;
+                                }
+                            ?></h4>
                             <p><?php
                                 $description = $arts[$row][3];
                                 if(strlen($description) > 75){
@@ -25,6 +33,7 @@
                             ?></p>
                             <hr/>
                             <h5><?=$arts[$row][4]?>zł</h5>
+                            
 
                         </a>
                     </div>
