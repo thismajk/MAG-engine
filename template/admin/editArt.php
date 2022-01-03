@@ -1,6 +1,6 @@
 <?php
     $artInfo = Gallery:: getArtById($conn, GET("id"));
-?>
+?><!--
 <div class="form">
     <form enctype="multipart/form-data" method="post" action="api/editArt.php">
         <input type="text" name="name" placeholder="Nazwa" value="<?=$artInfo[0]?>" required>
@@ -9,12 +9,12 @@
         <input type="number" name="price" placeholder="cena" value="<?=$artInfo[1]?>" required>
         <input type="number" name="catalogNumber" placeholder="Numer katalogowy" value="<?=$artInfo[6]?>" required>
         <select name="status" placeholder="status" required>
-            <?php
+           <?php
             if($artInfo[5] != "Dostępne"){
                 echo '<option value="Dostępne">Dostępne</option>';
             }
             if($artInfo[5] != "Nie dostępne"){
-                echo '<option value="Nie dostępne">Nie dostępne</option>';
+                echo '<option value="Nie dostępne">Niedostępne</option>';
             }
             if($artInfo[5] != "Sprzedane"){
                 echo '<option value="Sprzedane">Sprzedane</option>';
@@ -25,4 +25,4 @@
         <input type="hidden" name="id" value="<?=GET("id")?>">
         <input type="submit" value="Zmień">
     </form>
-</div>  
+</div>  -->

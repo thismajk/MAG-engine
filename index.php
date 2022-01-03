@@ -34,5 +34,6 @@
         require_once BASE_DIR."/template/adminDashBoard.php";
     }
     ?>
+    
 </body >
 </html >
